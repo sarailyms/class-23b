@@ -18,5 +18,6 @@ This repo is to practice git. Let's use it to share code or any useful content b
 ```
 
 Hopefully, this will be helpfull for everyone.
+merging test
 
 ---------------------------------------------
