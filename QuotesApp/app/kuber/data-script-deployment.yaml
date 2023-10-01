@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: data-script
+  name: data-script
+  namespace: quotesapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.network/myapp: "true"
+      io.kompose.service: data-script
+  template:
+    metadata:
+      labels:
+        io.kompose.network/myapp: "true"
+        io.kompose.service: data-script
+    spec:
+      containers:
+      - image: nazhu21/quotes-script:v2
+        name: data-script
+        resources: {}
+      restartPolicy: Always
+status: {}
